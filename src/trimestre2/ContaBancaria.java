@@ -1,4 +1,4 @@
-package junhoQuatorze;
+package trimestre2;
 
 public class ContaBancaria {
     String titular;
