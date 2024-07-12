@@ -1,28 +1,50 @@
 package trimestre2;
 
-public class ContaBancaria {
-    String titular;
-    String identificador;
-    String senha;
-    float saldo;
+import java.util.Random;
 
-    void depositar(float valor){
+public class ContaBancaria {
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    private String titular;
+    private String identificador;
+    private String senha;
+    protected float saldo;
+
+    public ContaBancaria(String titular, String senha){
+        this.titular = titular;
+        this.senha = senha;
+        geraIdentificador();
+    }
+
+    public void depositar(float valor) {
         saldo = saldo + valor;
     }
 
-    boolean sacar(float valor){
-        if (valor <= saldo) {
-            saldo = saldo - valor;
-            return true;
+    private void geraIdentificador(){
+        Random aleatorio = new Random();
+        String identificador ="";
+        for(int i=0;i<4; i++){
+            identificador+=(char)aleatorio.nextInt(65, 90);
         }
-        return false;
+        identificador+=aleatorio.nextInt(1000, 2000);
+        this.identificador = identificador;
     }
 
-    String verificar(){
-        return String.format("Saldo: R$%.2f", saldo);
+    public String getIdentificador() {
+        return identificador;
     }
 
-    boolean validar(String identificador, String senha){
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public boolean validar(String identificador, String senha){
         return this.identificador.equals(identificador) && this.senha.equals(senha);
     }
 }

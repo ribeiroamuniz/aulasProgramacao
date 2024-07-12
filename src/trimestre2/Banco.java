@@ -19,7 +19,7 @@ public class Banco {
 		return ler.nextFloat();
 	}
 
-	public static Corrente acessaCC(Corrente c1){
+	public static Corrente acessaCC(Corrente c){
 		char opc;
 		System.out.println("Acessando a conte "+c1.getIdentificador());
 		do {
