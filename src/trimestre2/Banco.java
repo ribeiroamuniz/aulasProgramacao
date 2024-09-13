@@ -21,6 +21,7 @@ public class Banco {
 
 	public static contaCorrente acessaCC(contaCorrente c){
 		char opc;
+		contaCorrente c1 = null;
 		System.out.println("Acessando a conte "+c1.getIdentificador());
 		do {
 			System.out.println("Selecione uma opção");
