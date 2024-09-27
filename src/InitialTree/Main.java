@@ -14,12 +14,18 @@ public class Main {
         System.out.println(l1);
         System.out.println("Elemento da posição 2:  "+ l1.obter(2));
        try{ 
-        System.out.println("Segundo elemento"+ l1.obter(-1)); //inválido
+        System.out.println("Segundo elemento"+ l1.obter(-1)); 
        } catch(IllegalArgumentException e){
         System.out.println(e.toString());
        }
        System.out.println("Segundo elemento"   + l1.obter(1));
        System.out.println("Posição do elemento C é de: "+ l1.posicaoDe("C"));
-       System.out.println("Posição do elemento C é de: "+ l1.posicaoDe("c")); //mostrando o -1 indicando o erro
+       System.out.println("Posição do elemento C é de: "+ l1.posicaoDe("c")); 
+       l1.adiciona("G");
+       l1.adiciona("H");
+       l1.adiciona("I");
+       l1.adiciona("J");
+       l1.adiciona("K");
+       l1.adiciona("L");
     }
 }

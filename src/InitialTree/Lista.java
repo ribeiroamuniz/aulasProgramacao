@@ -55,9 +55,28 @@ public class Lista {
                     return retorno+"]";
         }
        
-     public static void limpar(Lista) {
-    	 if(elementos!=0) {
-    		 elementos = 0;
-    	 }
+        
+        //ex
+         
+     public void limpar() {
+    	 tamanho = 0;
+    	 //corrigido
      }
+     
+     public boolean estavazia() {
+    	if(tamanho==0) {
+    		return true;
+    	}
+		return false;
+		//corrigido
+     }
+     
+//     public boolean remove(T elemento) {
+//    	 int posicao = posicaoDe[elemento];
+//    	 if(posicaoDe[elemento]>=0) {
+//    		 return true;
+//    	 }
+//    	 return false;
+//     }
+
 }

@@ -1,3 +1,5 @@
+package V01day1907;
+
 import java.io.*;
 
 public class GravarPessoa {
@@ -29,5 +31,3 @@ public class GravarPessoa {
 		}
 	}
 }
-GravarPessoa.java
-Exibindo GravarPessoa.java…
