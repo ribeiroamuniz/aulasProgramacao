@@ -22,7 +22,7 @@ public class ExemploString {
 		frase = frase.replace("programacao", "programacao II");
 		System.out.println(frase);
 		
-		String[] vetor = frase.split(" ");
+		String[] vetor = frase.split(" "); //slipt é pra quebrar/fazer a divisão da frase
 		for(String palavra:vetor) {
 			System.out.println(palavra);
 		}
